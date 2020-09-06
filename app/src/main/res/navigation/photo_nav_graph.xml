@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/photo_nav_graph"
+    app:startDestination="@id/fragmentPhoto">
+
+    <!-- Afghan girl Photo fragment -->
+    <fragment
+        android:id="@+id/fragmentPhoto"
+        android:name="mz.co.bilheteira.afghangirl.ui.Photo"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo" />
+</navigation>

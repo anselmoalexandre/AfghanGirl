@@ -3,25 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/afghangirl_nav_graph"
-    app:startDestination="@id/new_photos">
+    app:startDestination="@id/fragmentNew">
 
+    <!-- New photos fragment -->
     <fragment
-        android:id="@+id/new_photos"
-        android:name="mz.co.bilheteira.afghangirl.New"
-        android:label="New"
+        android:id="@+id/fragmentNew"
+        android:name="mz.co.bilheteira.afghangirl.ui.New"
+        android:label="fragment_new"
         tools:layout="@layout/fragment_new">
+        <!-- Actions -->
         <action
-            android:id="@+id/fragment_new"
-            app:destination="@id/photo" />
+            android:id="@+id/action_NewFragment_to_PhotoFragment"
+            app:destination="@id/photo_nav_graph" />
     </fragment>
 
-    <fragment
-        android:id="@+id/photo"
-        android:name="mz.co.bilheteira.afghangirl.Photo"
-        android:label="Photo"
-        tools:layout="@layout/fragment_photo">
-        <action
-            android:id="@+id/fragment_photo"
-            app:destination="@id/new_photos" />
-    </fragment>
+    <!-- Photo nav graph -->
+    <include app:graph="@navigation/photo_nav_graph" />
 </navigation>

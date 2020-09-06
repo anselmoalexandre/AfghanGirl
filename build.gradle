@@ -19,7 +19,13 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url  "https://dl.bintray.com/unsplash/unsplash-photopicker-android" }
+        maven { url "https://dl.bintray.com/unsplash/unsplash-photopicker-android" }
+    }
+
+    // Class path to add Safe Args to enable type-safe navigation and argument passing between destinations
+    dependencies {
+        def nav_version = "2.3.0"
+        //classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
     }
 }
 
