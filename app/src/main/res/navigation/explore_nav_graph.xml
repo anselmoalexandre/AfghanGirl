@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/explore_nav_graph"
+    app:startDestination="@id/fragmentExplore">
+
+    <!-- Explore fragment -->
+    <fragment
+        android:id="@+id/fragmentExplore"
+        android:name="mz.co.bilheteira.afghangirl.ui.explore.Explore"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore">
+        <!-- Actions -->
+        <action
+            android:id="@+id/action_fragmentExplore_to_fragmentDetails"
+            app:destination="@+id/fragmentDetails" />
+    </fragment>
+
+    <!-- Details fragment -->
+    <fragment
+        android:id="@+id/fragmentDetails"
+        android:name="mz.co.bilheteira.afghangirl.ui.explore.Details"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+        <!-- Actions -->
+        <action
+            android:id="@+id/action_fragmentDetails_to_fragmentPhoto"
+            app:destination="@+id/photo_nav_graph" />
+    </fragment>
+
+    <!-- Photo nav graph -->
+    <include app:graph="@navigation/photo_nav_graph" />
+</navigation>
