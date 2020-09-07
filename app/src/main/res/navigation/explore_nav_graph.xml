@@ -9,7 +9,7 @@
     <fragment
         android:id="@+id/fragmentExplore"
         android:name="mz.co.bilheteira.afghangirl.ui.explore.Explore"
-        android:label="fragment_explore"
+        android:label="Explore"
         tools:layout="@layout/fragment_explore">
         <!-- Actions -->
         <action
@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/fragmentDetails"
         android:name="mz.co.bilheteira.afghangirl.ui.explore.Details"
-        android:label="fragment_details"
+        android:label="Details"
         tools:layout="@layout/fragment_details">
         <!-- Actions -->
         <action
