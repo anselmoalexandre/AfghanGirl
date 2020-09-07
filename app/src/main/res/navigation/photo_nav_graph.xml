@@ -10,5 +10,9 @@
         android:id="@+id/fragmentPhoto"
         android:name="mz.co.bilheteira.afghangirl.ui.Photo"
         android:label="Photo"
-        tools:layout="@layout/fragment_photo" />
+        tools:layout="@layout/fragment_photo">
+        <argument
+            android:name="photoId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

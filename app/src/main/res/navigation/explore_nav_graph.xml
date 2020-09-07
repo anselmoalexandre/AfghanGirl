@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_fragmentDetails_to_fragmentPhoto"
             app:destination="@+id/photo_nav_graph" />
+        <argument
+            android:name="detailsId"
+            app:argType="integer" />
     </fragment>
 
     <!-- Photo nav graph -->
