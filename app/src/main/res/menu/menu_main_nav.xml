@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/destination_new"
-        android:title="@string/fragment_new" />
+        android:id="@+id/destination_home"
+        android:icon="@drawable/round_home_black_48"
+        android:title="@string/fragment_home" />
 
     <item
         android:id="@+id/destination_explore"
+        android:icon="@drawable/round_explore_black_48"
         android:title="@string/fragment_explore" />
     <item
         android:id="@+id/destination_search"
+        android:icon="@drawable/round_search_black_48"
         android:title="@string/fragment_search" />
 </menu>
