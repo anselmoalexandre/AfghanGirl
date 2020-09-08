@@ -7,6 +7,7 @@
     tools:context=".ui.explore.Explore">
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/explore_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Explore Fragment"
@@ -18,4 +19,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_to_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_50dp"
+        android:background="@color/colorPrimary"
+        android:text="To Details"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>

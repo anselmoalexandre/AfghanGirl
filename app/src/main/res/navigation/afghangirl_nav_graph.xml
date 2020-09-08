@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/afghangirl_nav_graph"
-    app:startDestination="@id/destination_new">
+    app:startDestination="@id/destination_home">
 
     <!-- New photos fragment -->
     <fragment
-        android:id="@+id/destination_new"
-        android:name="mz.co.bilheteira.afghangirl.ui.New"
-        android:label="New"
-        tools:layout="@layout/fragment_new">
+        android:id="@+id/destination_home"
+        android:name="mz.co.bilheteira.afghangirl.ui.Home"
+        android:label="Afghan girl"
+        tools:layout="@layout/fragment_home">
         <!-- Actions -->
         <action
             android:id="@+id/action_NewFragment_to_PhotoFragment"
@@ -50,10 +50,10 @@
 
     <!-- Search Fragment -->
     <fragment
-        android:id="@+id/destination_search"
-        android:name="mz.co.bilheteira.afghangirl.ui.search.Search"
-        android:label="Search"
-        tools:layout="@layout/fragment_search">
+        android:id="@+id/destination_profile"
+        android:name="mz.co.bilheteira.afghangirl.ui.profile.Profile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
         <!-- Actions -->
         <action
             android:id="@+id/action_fragmentSearch_to_fragmentDetails"

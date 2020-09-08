@@ -2,18 +2,15 @@ package mz.co.bilheteira.afghangirl
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.onNavDestinationSelected
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 class Main : AppCompatActivity() {
-
     // NavHost
     private val navHostFragment by lazy { supportFragmentManager.findFragmentById(R.id.nav_host_fragment) }
 
@@ -28,19 +25,9 @@ class Main : AppCompatActivity() {
         // Setting up the Bottom Navigation using Navigation Component
         val bottomNav = findViewById<BottomNavigationView>(R.id.main_nav)
         setupBottomNav(navController = navController, bottomNav = bottomNav)
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return item.onNavDestinationSelected(navController)
+        // Setting up the Action bar
+        setupAppBar(navController = navController)
     }
 
     /**
@@ -63,9 +50,18 @@ class Main : AppCompatActivity() {
 
     /**
      * Setup Action bar with Navigation Controller
+     * Removing the back arrow in the main destinations of the Afghan girl app
      * [navController] Navigation Controller
      */
-    private fun setupAppBarLayout(navController: NavController) {
-        setupActionBarWithNavController(navController)
+    private fun setupAppBar(navController: NavController) {
+        //  Pass the IDs of top-level destinations in the AppBarConfiguration
+        val appBarConfig = AppBarConfiguration(
+            topLevelDestinationIds = setOf(
+                R.id.destination_home,
+                R.id.destination_explore,
+                R.id.destination_profile
+            )
+        )
+        setupActionBarWithNavController(navController, appBarConfig)
     }
 }

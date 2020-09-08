@@ -10,7 +10,7 @@
         android:icon="@drawable/round_explore_black_48"
         android:title="@string/fragment_explore" />
     <item
-        android:id="@+id/destination_search"
-        android:icon="@drawable/round_search_black_48"
-        android:title="@string/fragment_search" />
+        android:id="@+id/destination_profile"
+        android:icon="@drawable/round_perm_identity_black_48"
+        android:title="@string/fragment_profile" />
 </menu>
