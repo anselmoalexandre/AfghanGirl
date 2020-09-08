@@ -11,7 +11,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.content_main.*
 
 class Main : AppCompatActivity() {
 
@@ -27,8 +26,8 @@ class Main : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         // Setting up the Bottom Navigation using Navigation Component
-        //val bottomNav = findViewById<BottomNavigationView>(R.id.main_nav)
-        //setupBottomNav(navController = navController, bottomNav = bottomNav)
+        val bottomNav = findViewById<BottomNavigationView>(R.id.main_nav)
+        setupBottomNav(navController = navController, bottomNav = bottomNav)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -49,24 +48,24 @@ class Main : AppCompatActivity() {
      * [navController] Navigation Controller
      * [bottomNav] Bottom Navigation View
      */
-    //private fun setupBottomNav(navController: NavController, bottomNav: BottomNavigationView) {
-      //  bottomNav.setupWithNavController(navController)
-    //}
+    private fun setupBottomNav(navController: NavController, bottomNav: BottomNavigationView) {
+        bottomNav.setupWithNavController(navController)
+    }
 
     /**
      * Setup the Navigation View
      * [navController] Navigation Controller
      * [navView] Navigation View
      */
-    //private fun setupDrawerLayout(navController: NavController, navView: NavigationView) {
-      //  navView.setupWithNavController(navController)
-    //}
+    private fun setupDrawerLayout(navController: NavController, navView: NavigationView) {
+        navView.setupWithNavController(navController)
+    }
 
     /**
      * Setup Action bar with Navigation Controller
      * [navController] Navigation Controller
      */
-    //private fun setupAppBarLayout(navController: NavController) {
-      //  setupActionBarWithNavController(navController)
-    //}
+    private fun setupAppBarLayout(navController: NavController) {
+        setupActionBarWithNavController(navController)
+    }
 }
