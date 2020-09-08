@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/destination_new"
+        android:title="@string/fragment_new" />
+
+    <item
+        android:id="@+id/destination_explore"
+        android:title="@string/fragment_explore" />
+    <item
+        android:id="@+id/destination_search"
+        android:title="@string/fragment_search" />
+</menu>

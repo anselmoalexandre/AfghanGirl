@@ -3,20 +3,60 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/afghangirl_nav_graph"
-    app:startDestination="@id/fragmentNew">
+    app:startDestination="@id/destination_new">
 
     <!-- New photos fragment -->
     <fragment
-        android:id="@+id/fragmentNew"
+        android:id="@+id/destination_new"
         android:name="mz.co.bilheteira.afghangirl.ui.New"
         android:label="New"
         tools:layout="@layout/fragment_new">
         <!-- Actions -->
         <action
             android:id="@+id/action_NewFragment_to_PhotoFragment"
-            app:destination="@id/photo_nav_graph" />
+            app:destination="@id/destination_photo" />
     </fragment>
 
-    <!-- Photo nav graph -->
-    <include app:graph="@navigation/photo_nav_graph" />
+    <!-- Afghan girl Photo fragment -->
+    <fragment
+        android:id="@+id/destination_photo"
+        android:name="mz.co.bilheteira.afghangirl.ui.Photo"
+        android:label="Photo"
+        tools:layout="@layout/fragment_photo" />
+
+    <!-- Explore fragment -->
+    <fragment
+        android:id="@+id/destination_explore"
+        android:name="mz.co.bilheteira.afghangirl.ui.explore.Explore"
+        android:label="Explore"
+        tools:layout="@layout/fragment_explore">
+        <!-- Actions -->
+        <action
+            android:id="@+id/action_fragmentExplore_to_fragmentDetails"
+            app:destination="@+id/destination_details" />
+    </fragment>
+
+    <!-- Details fragment -->
+    <fragment
+        android:id="@+id/destination_details"
+        android:name="mz.co.bilheteira.afghangirl.ui.explore.Details"
+        android:label="Details"
+        tools:layout="@layout/fragment_details">
+        <!-- Actions -->
+        <action
+            android:id="@+id/action_fragmentDetails_to_fragmentPhoto"
+            app:destination="@+id/destination_photo" />
+    </fragment>
+
+    <!-- Search Fragment -->
+    <fragment
+        android:id="@+id/destination_search"
+        android:name="mz.co.bilheteira.afghangirl.ui.search.Search"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <!-- Actions -->
+        <action
+            android:id="@+id/action_fragmentSearch_to_fragmentDetails"
+            app:destination="@+id/destination_explore" />
+    </fragment>
 </navigation>
