@@ -10,7 +10,7 @@
     <fragment
         android:id="@+id/fragmentSearch"
         android:name="mz.co.bilheteira.afghangirl.ui.search.Search"
-        android:label="fragment_search"
+        android:label="Search"
         tools:layout="@layout/fragment_search">
         <!-- Actions -->
         <action
