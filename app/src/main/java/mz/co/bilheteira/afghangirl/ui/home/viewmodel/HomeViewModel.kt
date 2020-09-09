@@ -20,7 +20,7 @@ class HomeViewModel(private val repository: HomeRepositoryImpl) : ViewModel() {
      * [client_id] Your Access key here
      * [page] Page number to retrieve, default = 1
      * [per_page] Number of photos per page, default = 10
-     * [order_by] How to sort the photos. Valid options are: latest, oldest, popular. Default = latest
+     * [order_by] How to sort the photos. Valid options are: latest, oldest, popular. Default is latest
      */
     fun getPhotos(client_id: String, page: Int = 1, per_page: Int, order_by: String = "latest") =
         viewModelScope.launch {
