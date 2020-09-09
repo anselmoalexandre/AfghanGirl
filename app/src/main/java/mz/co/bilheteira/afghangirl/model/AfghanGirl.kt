@@ -15,8 +15,10 @@ data class PhotoUrl(val regular: String, val small: String, val thumb: String)
 
 data class AfghanGirl(
     val id: String,
+    val width: Int,
+    val height: Int,
     val likes: Int,
-    val description: String,
+    val description: String?,
     val user: User,
     val urls: PhotoUrl
 )
