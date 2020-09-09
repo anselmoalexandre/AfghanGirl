@@ -8,7 +8,7 @@
     <!-- New photos fragment -->
     <fragment
         android:id="@+id/destination_home"
-        android:name="mz.co.bilheteira.afghangirl.ui.Home"
+        android:name="mz.co.bilheteira.afghangirl.ui.home.Home"
         android:label="Afghan girl"
         tools:layout="@layout/fragment_home">
         <!-- Actions -->
@@ -20,7 +20,7 @@
     <!-- Afghan girl Photo fragment -->
     <fragment
         android:id="@+id/destination_photo"
-        android:name="mz.co.bilheteira.afghangirl.ui.Photo"
+        android:name="mz.co.bilheteira.afghangirl.ui.home.Photo"
         android:label="Photo"
         tools:layout="@layout/fragment_photo" />
 

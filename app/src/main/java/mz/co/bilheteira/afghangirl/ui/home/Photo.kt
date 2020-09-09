@@ -1,4 +1,4 @@
-package mz.co.bilheteira.afghangirl.ui
+package mz.co.bilheteira.afghangirl.ui.home
 
 import android.content.Context
 import androidx.fragment.app.Fragment

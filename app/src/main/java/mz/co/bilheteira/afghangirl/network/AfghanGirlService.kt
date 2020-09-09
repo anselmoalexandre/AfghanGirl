@@ -9,8 +9,8 @@ interface AfghanGirlService {
     @GET("photos")
     suspend fun getPhotos(
         @Query("client_id") client_id: String,
-        @Query("page") page: Int = 1,
-        @Query("per_page") per_page: Int = 5,
-        @Query("order_by") order_by: String = "latest"
-    ): Response<AfghanGirl>
+        @Query("page") page: Int,
+        @Query("per_page") per_page: Int,
+        @Query("order_by") order_by: String
+    ): Response<List<AfghanGirl>>
 }
