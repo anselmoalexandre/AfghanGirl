@@ -1,7 +1,9 @@
 package mz.co.bilheteira.afghangirl
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -9,8 +11,12 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.coroutines.*
 
 class Main : AppCompatActivity() {
+    private var backPressOnce: Boolean = false
+
     // NavHost
     private val navHostFragment by lazy { supportFragmentManager.findFragmentById(R.id.nav_host_fragment) }
 
@@ -63,5 +69,43 @@ class Main : AppCompatActivity() {
             )
         )
         setupActionBarWithNavController(navController, appBarConfig)
+    }
+
+    /**
+     * Show Bottom Navigation on the main level destinations
+     */
+    fun showBottomNav() {
+        main_nav.visibility = View.VISIBLE
+    }
+
+    /**
+     * Hide Bottom Navigation on the nested child level destinations
+     */
+    fun hideBottomNav() {
+        main_nav.visibility = View.GONE
+    }
+
+    // Quit Afghan girl app on twice back press
+    override fun onBackPressed() {
+        // Check if the current destination is actually the start destination - Home destination
+        if (navController.graph.startDestination == navController.currentDestination?.id) {
+            // Check if back is already pressed. If yes, then exit the app.
+            if (backPressOnce) {
+                super.onBackPressed()
+                return
+            }
+
+            backPressOnce = true
+
+            // Launching a Kotlin Coroutine to hold a 2s
+            lifecycleScope.launch(Dispatchers.Default) {
+                delay(2000L)
+                withContext(Dispatchers.Main) {
+                    backPressOnce = false
+                }
+            }
+        } else {
+            super.onBackPressed()
+        }
     }
 }

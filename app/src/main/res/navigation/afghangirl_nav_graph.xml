@@ -13,7 +13,7 @@
         tools:layout="@layout/fragment_home">
         <!-- Actions -->
         <action
-            android:id="@+id/action_NewFragment_to_PhotoFragment"
+            android:id="@+id/action_HomeFragment_to_PhotoFragment"
             app:destination="@id/destination_photo" />
     </fragment>
 
