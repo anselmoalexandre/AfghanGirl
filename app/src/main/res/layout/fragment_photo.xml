@@ -1,19 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.Photo">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Photo Fragment"
-        android:textAllCaps="true"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_dark"
+        tools:context=".ui.Photo">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/afghanGirlUserPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_25dp"
+            android:layout_marginBottom="@dimen/dimen_25dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/afghan_girl" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/afghanGirlUserPhotoInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_info_white_48" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/afghanGirlUserPhotoLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            app:backgroundTint="@color/colorPrimary"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@id/afghanGirlUserPhotoDownload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/colorPrimary"
+            app:srcCompat="@drawable/baseline_favorite_white_48" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/afghanGirlUserPhotoDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            app:backgroundTint="@color/colorAccent"
+            app:fabSize="auto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/colorPrimary"
+            app:srcCompat="@drawable/baseline_arrow_downward_white_48" />
+
+        <!-- Progress Bar -->
+        <include layout="@layout/progress_bar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
