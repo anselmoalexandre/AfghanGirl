@@ -19,6 +19,8 @@ class HomeViewModel(private val repository: HomeRepositoryImpl) : ViewModel() {
      * Launch network request inside a coroutine using viewModel Scope
      * [client_id] Your Access key here
      * [page] Page number to retrieve, default = 1
+     * [per_page] Number of photos per page, default = 10
+     *
      */
     fun getPhotos(client_id: String, page: Int = 1, per_page: Int, order_by: String = "latest") =
         viewModelScope.launch {
