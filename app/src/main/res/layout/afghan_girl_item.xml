@@ -6,7 +6,7 @@
 
         <variable
             name="afghanGirl"
-            type="mz.co.bilheteira.afghangirl.model.AfghanGirl" />
+            type="mz.co.bilheteira.afghangirl.data.model.AfghanGirl" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

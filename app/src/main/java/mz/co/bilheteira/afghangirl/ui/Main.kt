@@ -1,4 +1,4 @@
-package mz.co.bilheteira.afghangirl
+package mz.co.bilheteira.afghangirl.ui
 
 import android.os.Bundle
 import android.view.View
@@ -11,9 +11,11 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.content_main.*
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
+import mz.co.bilheteira.afghangirl.R
 
+@AndroidEntryPoint
 class Main : AppCompatActivity() {
     private var backPressOnce: Boolean = false
 
@@ -28,12 +30,24 @@ class Main : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
+        // Setting up the Action bar
+        setupAppBar(navController = navController)
+
         // Setting up the Bottom Navigation using Navigation Component
         val bottomNav = findViewById<BottomNavigationView>(R.id.main_nav)
         setupBottomNav(navController = navController, bottomNav = bottomNav)
 
-        // Setting up the Action bar
-        setupAppBar(navController = navController)
+        // Hide bottom navigation on destinations that it's not needed
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.destination_home, R.id.destination_explore, R.id.destination_profile -> {
+                    bottomNav.visibility = View.VISIBLE
+                }
+                else -> {
+                    bottomNav.visibility = View.GONE
+                }
+            }
+        }
     }
 
     /**
@@ -43,15 +57,6 @@ class Main : AppCompatActivity() {
      */
     private fun setupBottomNav(navController: NavController, bottomNav: BottomNavigationView) {
         bottomNav.setupWithNavController(navController)
-    }
-
-    /**
-     * Setup the Navigation View
-     * [navController] Navigation Controller
-     * [navView] Navigation View
-     */
-    private fun setupDrawerLayout(navController: NavController, navView: NavigationView) {
-        navView.setupWithNavController(navController)
     }
 
     /**
@@ -69,20 +74,6 @@ class Main : AppCompatActivity() {
             )
         )
         setupActionBarWithNavController(navController, appBarConfig)
-    }
-
-    /**
-     * Show Bottom Navigation on the main level destinations
-     */
-    fun showBottomNav() {
-        main_nav.visibility = View.VISIBLE
-    }
-
-    /**
-     * Hide Bottom Navigation on the nested child level destinations
-     */
-    fun hideBottomNav() {
-        main_nav.visibility = View.GONE
     }
 
     // Quit Afghan girl app on twice back press

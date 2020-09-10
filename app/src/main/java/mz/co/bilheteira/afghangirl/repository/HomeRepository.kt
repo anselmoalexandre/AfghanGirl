@@ -1,6 +1,6 @@
 package mz.co.bilheteira.afghangirl.repository
 
-import mz.co.bilheteira.afghangirl.model.AfghanGirl
+import mz.co.bilheteira.afghangirl.data.model.AfghanGirl
 import retrofit2.Response
 
 interface HomeRepository {

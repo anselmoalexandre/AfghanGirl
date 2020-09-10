@@ -1,4 +1,4 @@
-package mz.co.bilheteira.afghangirl.network
+package mz.co.bilheteira.afghangirl.data.remote
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
