@@ -1,6 +1,6 @@
-package mz.co.bilheteira.afghangirl.network
+package mz.co.bilheteira.afghangirl.data.remote
 
-import mz.co.bilheteira.afghangirl.model.AfghanGirl
+import mz.co.bilheteira.afghangirl.data.model.AfghanGirl
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

@@ -1,11 +1,12 @@
 package mz.co.bilheteira.afghangirl.repository
 
-import mz.co.bilheteira.afghangirl.model.AfghanGirl
-import mz.co.bilheteira.afghangirl.network.AfghanGirlService
-import mz.co.bilheteira.afghangirl.network.AfghanGirlServiceBuilder
+import mz.co.bilheteira.afghangirl.data.model.AfghanGirl
+import mz.co.bilheteira.afghangirl.data.remote.AfghanGirlService
 import retrofit2.Response
+import javax.inject.Inject
 
-class HomeRepositoryImpl : HomeRepository {
+class HomeRepositoryImpl @Inject constructor(private val afghanGirlService: AfghanGirlService) :
+    HomeRepository {
     /**
      * Get photos
      * [client_id] Your Access key here
@@ -20,7 +21,11 @@ class HomeRepositoryImpl : HomeRepository {
         per_page: Int,
         order_by: String
     ): Response<List<AfghanGirl>> {
-        return AfghanGirlServiceBuilder.buildService(type = AfghanGirlService::class.java)
-            .getPhotos(client_id = client_id, page = page, per_page = per_page, order_by = order_by)
+        return afghanGirlService.getPhotos(
+            client_id = client_id,
+            page = page,
+            per_page = per_page,
+            order_by = order_by
+        )
     }
 }

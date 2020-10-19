@@ -13,4 +13,6 @@
     <color name="colorBackground">@android:color/white</color>
     <color name="colorRed">#d50000</color>
     <color name="colorGreen">#4caf50</color>
+
+    <color name="afghan_girl_transparent">@android:color/transparent</color>
 </resources>

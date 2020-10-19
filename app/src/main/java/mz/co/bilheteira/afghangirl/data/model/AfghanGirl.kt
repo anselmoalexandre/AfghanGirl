@@ -1,4 +1,4 @@
-package mz.co.bilheteira.afghangirl.model
+package mz.co.bilheteira.afghangirl.data.model
 
 data class Profile(val small: String, val medium: String, val large: String)
 

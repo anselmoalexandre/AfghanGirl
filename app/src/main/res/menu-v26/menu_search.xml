@@ -4,6 +4,6 @@
     <item
         android:icon="@drawable/round_search_black_48"
         android:iconTint="@android:color/white"
-        android:title="@string/fragment_profile"
+        android:title="@string/fragment_info"
         app:showAsAction="always" />
 </menu>

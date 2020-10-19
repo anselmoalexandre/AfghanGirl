@@ -8,7 +8,7 @@
     <!-- New photos fragment -->
     <fragment
         android:id="@+id/destination_home"
-        android:name="mz.co.bilheteira.afghangirl.ui.home.Home"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Home"
         android:label="Afghan girl"
         tools:layout="@layout/fragment_home">
         <!-- Actions -->
@@ -20,14 +20,14 @@
     <!-- Afghan girl Photo fragment -->
     <fragment
         android:id="@+id/destination_photo"
-        android:name="mz.co.bilheteira.afghangirl.ui.home.Photo"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Photo"
         android:label="Photo"
         tools:layout="@layout/fragment_photo" />
 
     <!-- Explore fragment -->
     <fragment
         android:id="@+id/destination_explore"
-        android:name="mz.co.bilheteira.afghangirl.ui.explore.Explore"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Explore"
         android:label="Explore"
         tools:layout="@layout/fragment_explore">
         <!-- Actions -->
@@ -39,7 +39,7 @@
     <!-- Details fragment -->
     <fragment
         android:id="@+id/destination_details"
-        android:name="mz.co.bilheteira.afghangirl.ui.explore.Details"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Details"
         android:label="Details"
         tools:layout="@layout/fragment_details">
         <!-- Actions -->
@@ -51,7 +51,7 @@
     <!-- Search Fragment -->
     <fragment
         android:id="@+id/destination_profile"
-        android:name="mz.co.bilheteira.afghangirl.ui.profile.Profile"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Profile"
         android:label="Profile"
         tools:layout="@layout/fragment_profile">
         <!-- Actions -->

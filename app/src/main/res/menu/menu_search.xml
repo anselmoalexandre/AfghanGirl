@@ -3,6 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:icon="@drawable/round_search_black_48"
-        android:title="@string/fragment_profile"
+        android:title="@string/fragment_info"
         app:showAsAction="always" />
 </menu>

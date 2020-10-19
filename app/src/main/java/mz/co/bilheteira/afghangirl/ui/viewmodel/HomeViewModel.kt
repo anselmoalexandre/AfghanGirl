@@ -1,19 +1,23 @@
-package mz.co.bilheteira.afghangirl.ui.home.viewmodel
+package mz.co.bilheteira.afghangirl.ui.viewmodel
 
 import android.util.Log
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import mz.co.bilheteira.afghangirl.model.AfghanGirl
-import mz.co.bilheteira.afghangirl.repository.HomeRepositoryImpl
+import mz.co.bilheteira.afghangirl.data.model.AfghanGirl
+import mz.co.bilheteira.afghangirl.repository.HomeRepository
 import mz.co.bilheteira.afghangirl.util.Resource
 import retrofit2.Response
 
-class HomeViewModel(private val repository: HomeRepositoryImpl) : ViewModel() {
+class HomeViewModel @ViewModelInject constructor(private val repository: HomeRepository) :
+    ViewModel() {
 
     // Mutable Live Data to observe Afghan girl photos
     private val photos: MutableLiveData<Resource<List<AfghanGirl>>> = MutableLiveData()
+    val _photos: MutableLiveData<Resource<List<AfghanGirl>>>
+        get() = photos
 
     /**
      * Launch network request inside a coroutine using viewModel Scope
@@ -22,7 +26,12 @@ class HomeViewModel(private val repository: HomeRepositoryImpl) : ViewModel() {
      * [per_page] Number of photos per page, default = 10
      * [order_by] How to sort the photos. Valid options are: latest, oldest, popular. Default is latest
      */
-    fun getPhotos(client_id: String, page: Int = 1, per_page: Int, order_by: String = "latest") =
+    fun getPhotos(
+        client_id: String,
+        page: Int = 1,
+        per_page: Int = 10,
+        order_by: String = "latest"
+    ) =
         viewModelScope.launch {
             // Update the state
             photos.postValue(Resource.Loading())
