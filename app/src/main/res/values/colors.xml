@@ -15,4 +15,5 @@
     <color name="colorGreen">#4caf50</color>
 
     <color name="afghan_girl_transparent">@android:color/transparent</color>
+    <color name="afghan_girl_white">@android:color/white</color>
 </resources>
