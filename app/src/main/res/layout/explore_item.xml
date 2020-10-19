@@ -1,48 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Theme.AfghanGirl.CardView.Explore"
+    app:shapeAppearance="@style/Theme.AfghanGirl.Shape.CardView.Explore"
+    android:layout_marginStart="@dimen/dimen_5dp"
+    android:layout_marginTop="@dimen/dimen_5dp"
+    android:layout_marginEnd="@dimen/dimen_5dp">
 
-    <data>
-
-    </data>
-
-    <com.google.android.material.card.MaterialCardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_5dp"
-        android:layout_marginTop="@dimen/dimen_5dp"
-        android:layout_marginEnd="@dimen/dimen_5dp"
-        app:cardBackgroundColor="@android:color/transparent"
-        app:cardCornerRadius="@dimen/dimen_20dp"
-        app:cardElevation="8dp"
-        app:cardPreventCornerOverlap="true">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/afghanGirlExplorePhoto"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/afghan_girl" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/afghanGirlExplorePhoto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/afghan_girl" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/afghanGirlExploreName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mozambique"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
-</layout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/afghanGirlExploreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mozambique"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
