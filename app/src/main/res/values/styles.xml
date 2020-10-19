@@ -17,7 +17,7 @@
     </style>
 
     <!-- Text Appearance Title -->
-    <style name="Theme.Bilheteira.TextAppearance.Title" parent="TextAppearance.MaterialComponents.Headline6">
+    <style name="Theme.AfghanGirl.TextAppearance.Title" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="fontFamily">@font/rajdhani</item>
@@ -27,7 +27,7 @@
     </style>
 
     <!-- Text Appearance SubTitle -->
-    <style name="Theme.Bilheteira.TextAppearance.SubTitle" parent="TextAppearance.MaterialComponents.Subtitle1">
+    <style name="Theme.AfghanGirl.TextAppearance.SubTitle" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="fontFamily">@font/rajdhani</item>
@@ -37,7 +37,7 @@
     </style>
 
     <!-- Text Appearance Child -->
-    <style name="Theme.Bilheteira.TextAppearance.Child" parent="TextAppearance.MaterialComponents.Body2">
+    <style name="Theme.AfghanGirl.TextAppearance.Child" parent="TextAppearance.MaterialComponents.Body2">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">10dp</item>
@@ -47,7 +47,7 @@
     </style>
 
     <!-- Text Appearance SubChild -->
-    <style name="Theme.Bilheteira.TextAppearance.SubChild" parent="TextAppearance.MaterialComponents.Caption">
+    <style name="Theme.AfghanGirl.TextAppearance.SubChild" parent="TextAppearance.MaterialComponents.Caption">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">10dp</item>
