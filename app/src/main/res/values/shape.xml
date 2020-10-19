@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.AfghanGirl.Shape.CardView.Explore" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+    <style name="Theme.AfghanGirl.ShapeAppearance.CardView.Explore" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerSize">10dp</item>
         <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="Theme.AfghanGirl.ShapeAppearance.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="Theme.AfghanGirl.ShapeAppearance.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="Theme.AfghanGirl.ShapeAppearance.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
     </style>
 </resources>
