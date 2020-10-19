@@ -13,6 +13,8 @@ data class User(
 
 data class PhotoUrl(val regular: String, val small: String, val thumb: String)
 
+data class Explore(val id:String, val imageUrl: String, val title: String)
+
 data class AfghanGirl(
     val id: String,
     val width: Int,

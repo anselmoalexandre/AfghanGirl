@@ -2,16 +2,16 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/Theme.AfghanGirl.CardView.Explore"
-    app:shapeAppearance="@style/Theme.AfghanGirl.ShapeAppearance.CardView.Explore"
     android:layout_marginStart="@dimen/dimen_5dp"
     android:layout_marginTop="@dimen/dimen_5dp"
-    android:layout_marginEnd="@dimen/dimen_5dp">
+    android:layout_marginEnd="@dimen/dimen_5dp"
+    app:shapeAppearance="@style/Theme.AfghanGirl.ShapeAppearance.CardView.Explore">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/afghanGirlExplorePhoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,13 +22,10 @@
             app:srcCompat="@drawable/afghan_girl" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/afghanGirlExploreName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/afghanGirlExploreTitle"
+            style="@style/Theme.AfghanGirl.TextAppearance.Title"
             android:text="Mozambique"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textColor="@color/afghan_girl_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
