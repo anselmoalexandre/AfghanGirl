@@ -12,5 +12,5 @@
     <item
         android:id="@+id/destination_profile"
         android:icon="@drawable/round_perm_identity_black_48"
-        android:title="@string/fragment_profile" />
+        android:title="@string/fragment_info" />
 </menu>

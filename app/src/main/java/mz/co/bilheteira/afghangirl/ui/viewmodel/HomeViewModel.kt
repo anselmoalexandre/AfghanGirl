@@ -26,7 +26,12 @@ class HomeViewModel @ViewModelInject constructor(private val repository: HomeRep
      * [per_page] Number of photos per page, default = 10
      * [order_by] How to sort the photos. Valid options are: latest, oldest, popular. Default is latest
      */
-    fun getPhotos(client_id: String, page: Int = 1, per_page: Int, order_by: String = "latest") =
+    fun getPhotos(
+        client_id: String,
+        page: Int = 1,
+        per_page: Int = 10,
+        order_by: String = "latest"
+    ) =
         viewModelScope.launch {
             // Update the state
             photos.postValue(Resource.Loading())

@@ -7,4 +7,6 @@
     <dimen name="dimen_32dp">32dp</dimen>
     <dimen name="dimen_25dp">25dp</dimen>
     <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="app_bar_height">350dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
