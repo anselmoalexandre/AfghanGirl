@@ -8,6 +8,7 @@
     tools:context=".ui.fragments.Profile">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarInfo"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
         android:fitsSystemWindows="true"
@@ -51,10 +52,9 @@
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/profile_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Theme.AfghanGirl.TextAppearance.SubTitle"
             android:padding="16dp"
             android:text="@string/large_text"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -62,4 +62,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:text="@string/read_more_about_afghan_girl"
+        android:textAllCaps="false"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:icon="@drawable/ic_local_library_black_24dp"
+        app:layout_anchor="@id/appBarInfo"
+        app:layout_anchorGravity="bottom|end" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

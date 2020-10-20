@@ -19,7 +19,7 @@ class Home : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // This method show tells the AppBar that this destination has a menu home_item
+        // This method show tells the AppBar that this destination has a menu item_users_photos
         setHasOptionsMenu(true)
     }
 
