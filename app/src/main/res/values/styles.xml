@@ -1,9 +1,10 @@
 <resources>
-    <!-- Theme -->
+    <!-- Base Theme -->
     <style name="Theme.AfghanGirl" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
-        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorPrimary">@color/afghan_girl_yellow_600</item>
+        <item name="colorPrimaryVariant">@color/afghan_girl_yellow_a700</item>
+        <item name="colorOnPrimary">@color/afghan_girl_black</item>
+        <item name="colorSecondary">@color/afghan_girl_deep_purple_600</item>
         <!-- Typography -->
         <item name="android:fontFamily">@font/rajdhani</item>
         <item name="fontFamily">@font/rajdhani</item>
