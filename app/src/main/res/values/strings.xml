@@ -13,9 +13,22 @@
     <string name="fragment_home">Home</string>
     <string name="fragment_explore">Explore</string>
     <string name="fragment_info">Info</string>
-    <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="large_text">
-        "Material is the metaphor.\n\n"
+        "The Afghan Girl\n\n"
+
+        "The young Afghan refugee who stared from the cover of National Geographic in June 1985 "
+        "was an enigma for 17 years. What was her name? Had she survived? Photographer Steve "
+        "McCurry joined a crew from National Geographic Television and Film to methodically search "
+        "for her. They showed her photograph around the refugee camp in Pakistan where McCurry had "
+        "encountered her as a school gir in December 1984. Finally, after some false leads, a man "
+        "who had also lived in the camp as a child recognized her. Yes, she was alive. She had "
+        "left the camp many years before and was living in the mountains Tora Bora region of "
+        "Afghanistan. He said he could find her, and three days later he and a friend brought her "
+        "back to the camp. There, the remarkable history of this woman, Sharbat Gula, began to be "
+        "told.\n"
+
+        "A Life Revealed\n\n"
+
 
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."
         "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
