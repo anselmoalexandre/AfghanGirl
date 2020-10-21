@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textview.MaterialTextView
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.explore_item.view.*
+import kotlinx.android.synthetic.main.item_explore.view.*
 import mz.co.bilheteira.afghangirl.R
 import mz.co.bilheteira.afghangirl.data.model.Explore
 
@@ -15,7 +15,7 @@ class ExploreAdapter(private val list: List<Explore>) :
     RecyclerView.Adapter<ExploreAdapter.ExploreViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExploreViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.explore_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_explore, parent, false)
         return ExploreViewHolder(ui = view)
     }
 
