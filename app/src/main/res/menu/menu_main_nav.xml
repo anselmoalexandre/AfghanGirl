@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/destination_home"
-        android:icon="@drawable/round_home_black_48"
+        android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/fragment_home" />
 
     <item
         android:id="@+id/destination_explore"
-        android:icon="@drawable/round_explore_black_48"
+        android:icon="@drawable/ic_explore_black_24dp"
         android:title="@string/fragment_explore" />
     <item
         android:id="@+id/destination_profile"
-        android:icon="@drawable/round_perm_identity_black_48"
+        android:icon="@drawable/ic_perm_identity_black_24dp"
         android:title="@string/fragment_info" />
 </menu>
