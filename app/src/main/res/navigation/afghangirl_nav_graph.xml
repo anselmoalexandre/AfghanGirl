@@ -50,7 +50,7 @@
 
     <!-- Afghan girl Info Fragment -->
     <fragment
-        android:id="@+id/destination_profile"
+        android:id="@+id/destination_info"
         android:name="mz.co.bilheteira.afghangirl.ui.fragments.Profile"
         android:label="Profile"
         tools:layout="@layout/fragment_profile">

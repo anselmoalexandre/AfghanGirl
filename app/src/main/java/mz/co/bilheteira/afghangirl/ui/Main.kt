@@ -10,7 +10,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import mz.co.bilheteira.afghangirl.R
@@ -40,7 +39,7 @@ class Main : AppCompatActivity() {
         // Hide bottom navigation on destinations that it's not needed
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.destination_home, R.id.destination_explore, R.id.destination_profile -> {
+                R.id.destination_home, R.id.destination_explore, R.id.destination_info -> {
                     bottomNav.visibility = View.VISIBLE
                 }
                 else -> {
@@ -70,7 +69,7 @@ class Main : AppCompatActivity() {
             topLevelDestinationIds = setOf(
                 R.id.destination_home,
                 R.id.destination_explore,
-                R.id.destination_profile
+                R.id.destination_info
             )
         )
         setupActionBarWithNavController(navController, appBarConfig)
