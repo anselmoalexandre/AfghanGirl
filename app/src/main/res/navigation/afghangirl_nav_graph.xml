@@ -53,6 +53,6 @@
         android:id="@+id/destination_info"
         android:name="mz.co.bilheteira.afghangirl.ui.fragments.Profile"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile">
+        tools:layout="@layout/fragment_info">
     </fragment>
 </navigation>
