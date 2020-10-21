@@ -11,11 +11,29 @@
         <item name="colorOnSurface">@color/afghan_girl_black</item>
         <item name="colorError">@color/afghan_girl_red_600</item>
         <item name="colorOnError">@color/afghan_girl_black</item>
-        <item name="android:background">@color/afghan_girl_white</item>
+        <item name="android:colorBackground">@color/afghan_girl_white</item>
         <item name="colorOnBackground">@color/afghan_girl_black</item>
+        <item name="android:statusBarColor">@color/afghan_girl_yellow_a700</item>
+        <item name="bottomNavigationStyle">@style/Theme.AfghanGirl.BottomNavigation</item>
         <!-- Typography -->
         <item name="android:fontFamily">@font/rajdhani</item>
         <item name="fontFamily">@font/rajdhani</item>
+        <!-- Enable activity transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- Enable content transitions -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+    </style>
+
+    <!-- Bottom Navigation View -->
+    <style name="Theme.AfghanGirl.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="itemIconTint">?attr/colorSecondary</item>
+        <item name="itemTextColor">?attr/colorSecondary</item>
+        <item name="itemRippleColor">?attr/colorSecondary</item>
+        <item name="itemTextAppearanceActive">@style/Theme.AfghanGirl.TextAppearance.Child</item>
+        <item name="itemTextAppearanceInactive">@style/Theme.AfghanGirl.TextAppearance.Child</item>
     </style>
 
     <!-- Explore card view -->

@@ -25,7 +25,7 @@
             android:id="@+id/afghanGirlExploreTitle"
             style="@style/Theme.AfghanGirl.TextAppearance.Title"
             android:text="Mozambique"
-            android:textColor="@color/afghan_girl_white"
+            android:textColor="?attr/colorOnSecondary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

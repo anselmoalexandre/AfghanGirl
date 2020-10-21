@@ -32,7 +32,6 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dimen_10dp"
         android:layout_marginBottom="@dimen/dimen_10dp"
-        app:backgroundTint="@color/colorAccent"
         app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
