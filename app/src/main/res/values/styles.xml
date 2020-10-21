@@ -5,6 +5,14 @@
         <item name="colorPrimaryVariant">@color/afghan_girl_yellow_a700</item>
         <item name="colorOnPrimary">@color/afghan_girl_black</item>
         <item name="colorSecondary">@color/afghan_girl_deep_purple_600</item>
+        <item name="colorSecondaryVariant">@color/afghan_girl_deep_purple_300</item>
+        <item name="colorOnSecondary">@color/afghan_girl_white</item>
+        <item name="colorSurface">@color/afghan_girl_white</item>
+        <item name="colorOnSurface">@color/afghan_girl_black</item>
+        <item name="colorError">@color/afghan_girl_red_600</item>
+        <item name="colorOnError">@color/afghan_girl_black</item>
+        <item name="android:background">@color/afghan_girl_white</item>
+        <item name="colorOnBackground">@color/afghan_girl_black</item>
         <!-- Typography -->
         <item name="android:fontFamily">@font/rajdhani</item>
         <item name="fontFamily">@font/rajdhani</item>
@@ -68,5 +76,6 @@
     </style>
 
     <style name="Theme.AfghanGirl.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
     <style name="Theme.AfghanGirl.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
 </resources>
