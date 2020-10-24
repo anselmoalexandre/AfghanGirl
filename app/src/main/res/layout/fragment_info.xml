@@ -4,26 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context=".ui.fragments.Info">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarInfo"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
-        android:fitsSystemWindows="true"
         android:theme="@style/Theme.AfghanGirl.AppBarOverlay">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleGravity="center_horizontal|bottom"
             app:expandedTitleMarginBottom="20dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-            app:titleEnabled="true"
-            app:toolbarId="@id/toolbarInfo">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="true">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="match_parent"
@@ -37,13 +33,6 @@
                 android:layout_height="80dp"
                 android:layout_gravity="bottom"
                 android:background="@drawable/scrim" />
-
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbarInfo"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/Theme.AfghanGirl.PopupOverlay" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -55,8 +44,9 @@
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/profile_text"
             style="@style/Theme.AfghanGirl.TextAppearance.SubTitle"
+            android:layout_marginBottom="@dimen/dimen_10dp"
             android:padding="16dp"
-            android:text="@string/large_text"
+            android:text="@string/afghan_girl_desc_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,8 +59,8 @@
         android:layout_marginEnd="@dimen/dimen_10dp"
         android:text="@string/read_more_about_afghan_girl"
         android:textAllCaps="false"
-        app:layout_scrollFlags="scroll|enterAlways"
         app:icon="@drawable/ic_local_library_black_24dp"
         app:layout_anchor="@id/appBarInfo"
-        app:layout_anchorGravity="bottom|end" />
+        app:layout_anchorGravity="bottom|end"
+        app:layout_scrollFlags="scroll|enterAlways" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
