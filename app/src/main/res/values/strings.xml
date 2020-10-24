@@ -44,4 +44,7 @@
         "\nClick read more, and enjoy.\n\n"
     </string>
     <string name="read_more_about_afghan_girl">Read more</string>
+    <string name="afghan_girl_url">
+        https://www.nationalgeographic.com/magazine/2002/04/afghan-girl-revealed/
+    </string>
 </resources>

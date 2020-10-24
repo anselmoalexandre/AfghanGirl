@@ -9,8 +9,8 @@ import mz.co.bilheteira.afghangirl.data.remote.AfghanGirlService
 import mz.co.bilheteira.afghangirl.repository.HomeRepository
 import mz.co.bilheteira.afghangirl.repository.HomeRepositoryImpl
 
-@InstallIn(ActivityRetainedComponent::class)
 @Module
+@InstallIn(ActivityRetainedComponent::class)
 object RepositoryModule {
 
     @Provides
