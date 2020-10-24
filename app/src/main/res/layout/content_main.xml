@@ -16,4 +16,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/afghangirl_nav_graph" />
+
+    <include layout="@layout/progress_bar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
