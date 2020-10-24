@@ -13,6 +13,10 @@ class ExploreRepositoryImpl @Inject constructor(private val afghanGirlService: A
      * [page] Page number to retrieve. (Optional; default: 1)
      * [per_page] Number of items per page. (Optional; default: 10)
      */
-    override suspend fun getCollections(page: Int, per_page: Int): Response<List<Collections>> =
-        afghanGirlService.getCollections(page = page, per_page = page)
+    override suspend fun getCollections(
+        client_id: String,
+        page: Int,
+        per_page: Int
+    ): Response<List<Collections>> =
+        afghanGirlService.getCollections(client_id = client_id, page = page, per_page = page)
 }
