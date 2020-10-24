@@ -1,34 +1,35 @@
 package mz.co.bilheteira.afghangirl.data.remote
 
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ApplicationComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.lang.StringBuilder
 
+@Module
+@InstallIn(ApplicationComponent::class)
 object AfghanGirlServiceBuilder {
     // URL to the Unsplash API
     private const val AFGHAN_GIRL_URL = "https://api.unsplash.com/"
 
-    // Logging Interceptor
-    private val logInterceptor: HttpLoggingInterceptor =
+    @Provides
+    fun provideLogInterceptor(): HttpLoggingInterceptor =
         HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 
-    // OkHttp Client
-    private val okHttpClient: OkHttpClient.Builder = OkHttpClient.Builder().addInterceptor(
-        logInterceptor
-    )
+    @Provides
+    fun provideOkHttpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient.Builder =
+        OkHttpClient.Builder().addInterceptor(loggingInterceptor)
 
-    // Retrofit builder
-    private val builder: Retrofit.Builder = Retrofit.Builder().baseUrl(AFGHAN_GIRL_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .client(okHttpClient.build())
+    @Provides
+    fun provideRetrofitBuilder(client: OkHttpClient.Builder): Retrofit.Builder =
+        Retrofit.Builder().baseUrl(AFGHAN_GIRL_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(client.build())
 
-    // Retrofit instance
-    private val retrofit: Retrofit = builder.build()
-
-    /**
-     * Use this method to build your retrofit builder
-     * [T] Generic type
-     */
-    fun <T> buildService(type: Class<T>): T = retrofit.create(type)
+    @Provides
+    fun provideRetrofit(builder: Retrofit.Builder): Retrofit = builder.build()
 }

@@ -1,6 +1,6 @@
 package mz.co.bilheteira.afghangirl.ui.viewmodel
 
-import android.util.Log
+
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,7 +12,7 @@ import mz.co.bilheteira.afghangirl.util.Resource
 import retrofit2.Response
 
 class HomeViewModel @ViewModelInject constructor(private val repository: HomeRepository) :
-    ViewModel() {
+    ViewModel(){
 
     // Mutable Live Data to observe Afghan girl photos
     private val photos: MutableLiveData<Resource<List<AfghanGirl>>> = MutableLiveData()
@@ -37,17 +37,15 @@ class HomeViewModel @ViewModelInject constructor(private val repository: HomeRep
             photos.postValue(Resource.Loading())
             try {
                 // Make a network call
-                val agPhotos = repository.getPhotos(
+                val afghanPhotos = repository.getPhotos(
                     client_id = client_id,
                     page = page,
                     per_page = per_page,
                     order_by = order_by
                 )
-                // Good, now update the observer
-                photos.postValue(handlePhotosResponse(response = agPhotos))
+                // Handle the response
+                photos.postValue(handlePhotosResponse(response = afghanPhotos))
             } catch (t: Throwable) {
-                // Log the exception
-                Log.d("TAG:", t.toString())
                 // Update the request state
                 photos.postValue(Resource.Error(message = t.message))
             }

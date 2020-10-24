@@ -1,2 +1,3 @@
+include ':recyclerviewgesturedetector'
 include ':app'
 rootProject.name = "AFGHANGIRL"

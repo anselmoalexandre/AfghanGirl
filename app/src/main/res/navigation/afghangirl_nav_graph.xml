@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/afghangirl_nav_graph"
-    app:startDestination="@id/destination_home">
+    app:startDestination="@id/destination_info">
 
     <!-- Home fragment -->
     <fragment
@@ -51,7 +51,7 @@
     <!-- Afghan girl Info Fragment -->
     <fragment
         android:id="@+id/destination_info"
-        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Profile"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Info"
         android:label="Profile"
         tools:layout="@layout/fragment_info">
     </fragment>
