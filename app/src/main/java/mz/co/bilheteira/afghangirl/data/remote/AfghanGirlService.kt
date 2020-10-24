@@ -17,6 +17,7 @@ interface AfghanGirlService {
 
     @GET("collections")
     suspend fun getCollections(
+        @Query("client_id") client_id: String,
         @Query("page") page: Int,
         @Query("per_page") per_page: Int
     ): Response<List<Collections>>

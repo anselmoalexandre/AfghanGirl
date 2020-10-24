@@ -10,5 +10,9 @@ interface ExploreRepository {
      * [page] Page number to retrieve. (Optional; default: 1)
      * [per_page] Number of items per page. (Optional; default: 10)
      */
-    suspend fun getCollections(page: Int = 1, per_page: Int = 10): Response<List<Collections>>
+    suspend fun getCollections(
+        client_id: String,
+        page: Int = 1,
+        per_page: Int = 10
+    ): Response<List<Collections>>
 }
