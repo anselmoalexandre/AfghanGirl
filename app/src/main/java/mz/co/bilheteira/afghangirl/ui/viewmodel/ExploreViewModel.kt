@@ -25,23 +25,24 @@ class ExploreViewModel @ViewModelInject constructor(private val repository: Expl
      * [page] Page number to retrieve. (Optional; default: 1)
      * [per_page] Number of items per page. (Optional; default: 10)
      */
-    fun getCollections(client_id: String, page: Int, per_page: Int) = viewModelScope.launch {
-        // Update the state
-        _collections.postValue(Resource.Loading())
-        try {
-            // Make a network call
-            val afghanCollections = repository.getCollections(
-                client_id = client_id,
-                page = page,
-                per_page = per_page
-            )
-            // Handle the response
-            _collections.postValue(handleCollectionsResponse(response = afghanCollections))
-        } catch (t: Throwable) {
-            // Update the request state
-            _collections.postValue(Resource.Error(message = t.message))
+    fun getCollections(client_id: String, page: Int = 1, per_page: Int = 10) =
+        viewModelScope.launch {
+            // Update the state
+            _collections.postValue(Resource.Loading())
+            try {
+                // Make a network call
+                val afghanCollections = repository.getCollections(
+                    client_id = client_id,
+                    page = page,
+                    per_page = per_page
+                )
+                // Handle the response
+                _collections.postValue(handleCollectionsResponse(response = afghanCollections))
+            } catch (t: Throwable) {
+                // Update the request state
+                _collections.postValue(Resource.Error(message = t.message))
+            }
         }
-    }
 
     /**
      * Handle the HTTP response

@@ -12,7 +12,7 @@ interface ExploreRepository {
      */
     suspend fun getCollections(
         client_id: String,
-        page: Int = 1,
-        per_page: Int = 10
+        page: Int,
+        per_page: Int
     ): Response<List<Collections>>
 }
