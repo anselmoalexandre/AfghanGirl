@@ -1,12 +1,12 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="dimen_50dp">50dp</dimen>
-    <dimen name="dimen_20dp">20dp</dimen>
-    <dimen name="dimen_10dp">10dp</dimen>
-    <dimen name="dimen_15dp">15dp</dimen>
-    <dimen name="dimen_32dp">32dp</dimen>
-    <dimen name="dimen_25dp">25dp</dimen>
-    <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_15dp">15dp</dimen>
+    <dimen name="_32dp">32dp</dimen>
+    <dimen name="_25dp">25dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
     <dimen name="app_bar_height">350dp</dimen>
     <dimen name="text_margin">16dp</dimen>
 </resources>

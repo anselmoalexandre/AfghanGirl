@@ -16,14 +16,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/Theme.AfghanGirl.ShapeAppearance.Photo"
             app:srcCompat="@drawable/afghan_girl" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/afghanGirlUserAvatar"
-            android:layout_width="@dimen/dimen_32dp"
-            android:layout_height="@dimen/dimen_32dp"
-            android:layout_marginStart="@dimen/dimen_10dp"
-            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_width="@dimen/_32dp"
+            android:layout_height="@dimen/_32dp"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
             android:src="@drawable/afghan_girl"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -32,8 +33,8 @@
             android:id="@+id/afghanGirlUser"
             style="@style/Theme.AfghanGirl.TextAppearance.SubTitle"
             android:layout_width="wrap_content"
-            android:layout_marginStart="@dimen/dimen_10dp"
-            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_15dp"
             android:textColor="@color/afghan_girl_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/afghanGirlUserAvatar" />

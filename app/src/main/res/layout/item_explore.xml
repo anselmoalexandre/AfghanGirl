@@ -2,9 +2,6 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/Theme.AfghanGirl.CardView.Explore"
-    android:layout_marginStart="@dimen/dimen_5dp"
-    android:layout_marginTop="@dimen/dimen_5dp"
-    android:layout_marginEnd="@dimen/dimen_5dp"
     app:shapeAppearance="@style/Theme.AfghanGirl.ShapeAppearance.CardView.Explore">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,7 +21,6 @@
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/afghanGirlExploreTitle"
             style="@style/Theme.AfghanGirl.TextAppearance.Title"
-            android:text="Mozambique"
             android:textColor="?attr/colorOnSecondary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
