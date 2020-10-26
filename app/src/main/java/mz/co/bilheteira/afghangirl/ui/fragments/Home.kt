@@ -18,7 +18,6 @@ import mz.co.bilheteira.recyclerviewgesturedetector.listener.OnTouchListener
 
 @AndroidEntryPoint
 class Home : Fragment(R.layout.fragment_home) {
-
     // Home View Model
     private val viewModel: HomeViewModel by viewModels()
 
@@ -31,9 +30,10 @@ class Home : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Load photos
+        viewModel.getPhotos(client_id = "4Do3EYsddZlw4MGyesEVwP53wMeR8sl_hlcXIcA7o6g")
         // Observe photos
-        viewModel.getPhotos("4Do3EYsddZlw4MGyesEVwP53wMeR8sl_hlcXIcA7o6g")
-        viewModel._photos.observe(viewLifecycleOwner, { response ->
+        viewModel.photos.observe(viewLifecycleOwner, { response ->
             when (response) {
                 is Resource.Loading -> {
                     // Show progress bar

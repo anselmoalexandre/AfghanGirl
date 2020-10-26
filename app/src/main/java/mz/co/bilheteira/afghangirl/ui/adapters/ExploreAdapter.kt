@@ -9,9 +9,9 @@ import com.google.android.material.textview.MaterialTextView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_explore.view.*
 import mz.co.bilheteira.afghangirl.R
-import mz.co.bilheteira.afghangirl.data.model.Explore
+import mz.co.bilheteira.afghangirl.data.model.Collections
 
-class ExploreAdapter(private val list: List<Explore>) :
+class ExploreAdapter(private val list: List<Collections>) :
     RecyclerView.Adapter<ExploreAdapter.ExploreViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExploreViewHolder {
@@ -20,7 +20,7 @@ class ExploreAdapter(private val list: List<Explore>) :
     }
 
     override fun onBindViewHolder(holder: ExploreViewHolder, position: Int) {
-        Picasso.get().load(list[position].imageUrl).into(holder.photo)
+        Picasso.get().load(list[position].cover_photo.urls.regular).into(holder.photo)
         holder.title.text = list[position].title
     }
 

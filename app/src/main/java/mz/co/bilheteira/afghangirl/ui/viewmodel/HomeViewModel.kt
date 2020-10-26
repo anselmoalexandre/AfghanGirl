@@ -15,9 +15,9 @@ class HomeViewModel @ViewModelInject constructor(private val repository: HomeRep
     ViewModel(){
 
     // Mutable Live Data to observe Afghan girl photos
-    private val photos: MutableLiveData<Resource<List<AfghanGirl>>> = MutableLiveData()
-    val _photos: MutableLiveData<Resource<List<AfghanGirl>>>
-        get() = photos
+    private val _photos: MutableLiveData<Resource<List<AfghanGirl>>> = MutableLiveData()
+    val photos: MutableLiveData<Resource<List<AfghanGirl>>>
+        get() = _photos
 
     /**
      * Launch network request inside a coroutine using viewModel Scope
@@ -34,7 +34,7 @@ class HomeViewModel @ViewModelInject constructor(private val repository: HomeRep
     ) =
         viewModelScope.launch {
             // Update the state
-            photos.postValue(Resource.Loading())
+            _photos.postValue(Resource.Loading())
             try {
                 // Make a network call
                 val afghanPhotos = repository.getPhotos(
@@ -44,10 +44,10 @@ class HomeViewModel @ViewModelInject constructor(private val repository: HomeRep
                     order_by = order_by
                 )
                 // Handle the response
-                photos.postValue(handlePhotosResponse(response = afghanPhotos))
+                _photos.postValue(handlePhotosResponse(response = afghanPhotos))
             } catch (t: Throwable) {
                 // Update the request state
-                photos.postValue(Resource.Error(message = t.message))
+                _photos.postValue(Resource.Error(message = t.message))
             }
         }
 

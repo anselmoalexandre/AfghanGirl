@@ -44,7 +44,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/profile_text"
             style="@style/Theme.AfghanGirl.TextAppearance.SubTitle"
-            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
             android:padding="16dp"
             android:text="@string/afghan_girl_desc_text"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -56,7 +56,7 @@
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
         android:text="@string/read_more_about_afghan_girl"
         android:textAllCaps="false"
         app:icon="@drawable/ic_local_library_black_24dp"
