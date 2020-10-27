@@ -5,7 +5,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_explore.*
 import kotlinx.android.synthetic.main.progress_bar.*
 import mz.co.bilheteira.afghangirl.R
@@ -15,8 +17,8 @@ import mz.co.bilheteira.afghangirl.util.Resource
 import mz.co.bilheteira.recyclerviewgesturedetector.RecyclerviewGestureDetector
 import mz.co.bilheteira.recyclerviewgesturedetector.listener.OnTouchListener
 
+@AndroidEntryPoint
 class Explore : Fragment(R.layout.fragment_explore) {
-
     private val viewModel: ExploreViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -24,7 +26,7 @@ class Explore : Fragment(R.layout.fragment_explore) {
         // Load collections
         viewModel.getCollections(client_id = "4Do3EYsddZlw4MGyesEVwP53wMeR8sl_hlcXIcA7o6g")
         // Observe collections changes
-        viewModel.collections.observe(viewLifecycleOwner, { response ->
+        viewModel.collections.observe(viewLifecycleOwner) { response ->
             when (response) {
                 is Resource.Loading -> {
                     progressBar.visibility = View.VISIBLE
@@ -65,6 +67,6 @@ class Explore : Fragment(R.layout.fragment_explore) {
                     progressBar.visibility = View.GONE
                 }
             }
-        })
+        }
     }
 }

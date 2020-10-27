@@ -20,7 +20,7 @@ class ExploreAdapter(private val list: List<Collections>) :
     }
 
     override fun onBindViewHolder(holder: ExploreViewHolder, position: Int) {
-        Picasso.get().load(list[position].cover_photo.urls.regular).into(holder.photo)
+        Picasso.get().load(list[position].cover_photo.urls.small).into(holder.photo)
         holder.title.text = list[position].title
     }
 

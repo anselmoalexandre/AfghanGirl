@@ -9,7 +9,7 @@
     <fragment
         android:id="@+id/destination_home"
         android:name="mz.co.bilheteira.afghangirl.ui.fragments.Home"
-        android:label="Afghan girl"
+        android:label="@string/afghan_girl"
         tools:layout="@layout/fragment_home">
         <!-- Actions -->
         <action
@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/destination_explore"
         android:name="mz.co.bilheteira.afghangirl.ui.fragments.Explore"
-        android:label="Explore"
+        android:label="@string/explore"
         tools:layout="@layout/fragment_explore">
         <!-- Actions -->
         <action
@@ -40,7 +40,7 @@
     <fragment
         android:id="@+id/destination_details"
         android:name="mz.co.bilheteira.afghangirl.ui.fragments.Details"
-        android:label="Details"
+        android:label="@string/detalhes"
         tools:layout="@layout/fragment_details">
         <!-- Actions -->
         <action
@@ -52,7 +52,7 @@
     <fragment
         android:id="@+id/destination_info"
         android:name="mz.co.bilheteira.afghangirl.ui.fragments.Info"
-        android:label="Profile"
+        android:label="@string/afghan_girl_history"
         tools:layout="@layout/fragment_info">
     </fragment>
 </navigation>
