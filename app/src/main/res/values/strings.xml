@@ -137,4 +137,8 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="afghan_girl_history">Afghan Girl History</string>
+    <string name="detalhes">Details</string>
+    <string name="explore">Explore</string>
+    <string name="afghan_girl">Afghan Girl</string>
 </resources>

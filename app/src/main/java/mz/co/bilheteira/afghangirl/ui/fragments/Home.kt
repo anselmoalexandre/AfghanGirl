@@ -5,6 +5,7 @@ import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -33,7 +34,7 @@ class Home : Fragment(R.layout.fragment_home) {
         // Load photos
         viewModel.getPhotos(client_id = "4Do3EYsddZlw4MGyesEVwP53wMeR8sl_hlcXIcA7o6g")
         // Observe photos
-        viewModel.photos.observe(viewLifecycleOwner, { response ->
+        viewModel.photos.observe(viewLifecycleOwner) { response ->
             when (response) {
                 is Resource.Loading -> {
                     // Show progress bar
@@ -76,7 +77,7 @@ class Home : Fragment(R.layout.fragment_home) {
                     progressBar.visibility = View.GONE
                 }
             }
-        })
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
