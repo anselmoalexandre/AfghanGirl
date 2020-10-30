@@ -2,8 +2,10 @@ package mz.co.bilheteira.afghangirl.data.remote
 
 import mz.co.bilheteira.afghangirl.data.model.AfghanGirl
 import mz.co.bilheteira.afghangirl.data.model.Collections
+import mz.co.bilheteira.afghangirl.data.model.Photo
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface AfghanGirlService {
@@ -15,11 +17,11 @@ interface AfghanGirlService {
         @Query("order_by") order_by: String
     ): Response<List<AfghanGirl>>
 
-    @GET("photos")
+    @GET("photos/:{id}")
     suspend fun getPhoto(
-        @Query("client_id") client_id: String,
-        @Query("id") id: String
-    ): Response<List<AfghanGirl>>
+        @Path("id") id: String,
+        @Query("client_id") client_id: String
+    ): Response<List<Photo>>
 
     @GET("collections")
     suspend fun getCollections(
