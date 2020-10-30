@@ -21,7 +21,7 @@ interface AfghanGirlService {
     suspend fun getPhoto(
         @Path("id") id: String,
         @Query("client_id") client_id: String
-    ): Response<List<Photo>>
+    ): Response<Photo>
 
     @GET("collections")
     suspend fun getCollections(
