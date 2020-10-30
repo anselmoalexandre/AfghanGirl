@@ -15,6 +15,12 @@ interface AfghanGirlService {
         @Query("order_by") order_by: String
     ): Response<List<AfghanGirl>>
 
+    @GET("photos")
+    suspend fun getPhoto(
+        @Query("client_id") client_id: String,
+        @Query("id") id: String
+    ): Response<List<AfghanGirl>>
+
     @GET("collections")
     suspend fun getCollections(
         @Query("client_id") client_id: String,

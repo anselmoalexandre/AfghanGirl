@@ -19,6 +19,21 @@ data class Urls(
     val thumb: String
 )
 
+data class Exif(val make: String, val model: String, val iso: Int)
+
+data class Location(val city: String, val country: String)
+
+data class Photo(
+    val id: String,
+    val downloads: Int,
+    val likes: Int,
+    val description: String?,
+    val exif: Exif,
+    val location: Location,
+    val urls: Urls,
+    val user: User
+)
+
 data class Cover(
     val id: String,
     val width: Int,
