@@ -2,10 +2,11 @@ package mz.co.bilheteira.afghangirl.ui.fragments
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -57,11 +58,11 @@ class Home : Fragment(R.layout.fragment_home) {
                                     recycler = homeRecyclerView,
                                     listener = object : OnTouchListener {
                                         override fun onSingleClick(view: View, position: Int) {
-                                            Toast.makeText(
-                                                requireContext(),
-                                                "item on $position",
-                                                Toast.LENGTH_SHORT
-                                            ).show()
+                                            val args = bundleOf("id" to listOfItems[position].id)
+                                            findNavController().navigate(
+                                                R.id.action_HomeFragment_to_PhotoFragment,
+                                                args
+                                            )
                                         }
 
                                         override fun onLongClick(view: View, position: Int) {}
