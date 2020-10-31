@@ -16,8 +16,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearance="@style/Theme.AfghanGirl.ShapeAppearance.Photo"
-            app:srcCompat="@drawable/afghan_girl" />
+            app:shapeAppearance="@style/Theme.AfghanGirl.ShapeAppearance.Photo" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/afghanGirlUserAvatar"
@@ -25,7 +24,6 @@
             android:layout_height="@dimen/_32dp"
             android:layout_marginStart="@dimen/_10dp"
             android:layout_marginBottom="@dimen/_10dp"
-            android:src="@drawable/afghan_girl"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
