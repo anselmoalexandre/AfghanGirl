@@ -22,6 +22,7 @@ interface AfghanGirlRepository {
     ): Response<List<AfghanGirl>>
 
     /**
+     * [client_id] Client key
      * Get a single page from the list of all collections
      * [page] Page number to retrieve. (Optional; default: 1)
      * [per_page] Number of items per page. (Optional; default: 10)
@@ -34,7 +35,24 @@ interface AfghanGirlRepository {
 
     /**
      * Retrieve a single photo.
+     * [client_id] Client key
      * [id] The photo’s ID. Required.
      */
     suspend fun getPhoto(client_id: String, id: String): Response<Photo>
+
+    /**
+     * Get collection's photos
+     * [client_id] Client key
+     * [id] The collection’s ID. Required.
+     * [page] Page number to retrieve. (Optional; default: 1)
+     * [per_page] Number of items per page. (Optional; default: 10)
+     * [orientation] Filter by photo orientation. Optional. (Valid values: landscape, portrait, squarish)
+     */
+    suspend fun getCollectionPhotos(
+        client_id: String,
+        id: String,
+        page: Int = 1,
+        per_page: Int = 10,
+        orientation: String
+    ): Response<List<AfghanGirl>>
 }

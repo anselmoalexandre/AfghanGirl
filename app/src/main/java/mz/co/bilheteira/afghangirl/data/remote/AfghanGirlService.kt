@@ -29,4 +29,13 @@ interface AfghanGirlService {
         @Query("page") page: Int,
         @Query("per_page") per_page: Int
     ): Response<List<Collections>>
+
+    @GET("collections/{id}/photos")
+    suspend fun getCollectionPhotos(
+        @Path("id") id: String,
+        @Query("client_id") client_id: String,
+        @Query("page") page: Int,
+        @Query("per_page") per_page: Int,
+        @Query("orientation") orientation: String
+    ): Response<List<AfghanGirl>>
 }
