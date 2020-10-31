@@ -74,7 +74,8 @@ class Details : Fragment(R.layout.fragment_details) {
                                                 )
 
                                             // Navigate
-                                            findNavController().navigate(directions)
+                                            if (findNavController().currentDestination?.id == R.id.destination_details)
+                                                findNavController().navigate(directions)
                                         }
 
 

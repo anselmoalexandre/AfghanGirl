@@ -62,8 +62,9 @@ class Home : Fragment(R.layout.fragment_home) {
                                                 HomeDirections.actionHomeFragmentToPhotoFragment(
                                                     photoId = listOfItems[position].id
                                                 )
-                                            // Navigate to the destination
-                                            findNavController().navigate(directions)
+                                            // Navigate to the destination Photo fragment
+                                            if (findNavController().currentDestination?.id == R.id.destination_home)
+                                                findNavController().navigate(directions)
                                         }
 
                                         override fun onLongClick(view: View, position: Int) {}
