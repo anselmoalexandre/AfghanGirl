@@ -42,9 +42,9 @@ class Photo : Fragment(R.layout.fragment_photo) {
                     // Hide progress bar
                     progressBar.visibility = View.GONE
 
-                    // Handle the reponse data
+                    // Handle the response data
                     response.data?.let { photo ->
-                        Picasso.get().load(photo.urls.full).into(afghanGirlUserPhoto)
+                        Picasso.get().load(photo.urls.regular).into(afghanGirlUserPhoto)
                     }
                 }
                 is Resource.Error -> {
