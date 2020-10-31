@@ -29,9 +29,9 @@ class DetailsViewModel @ViewModelInject constructor(private val repository: Afgh
     fun getCollectionPhotos(
         client_id: String,
         id: String,
-        page: Int,
-        per_page: Int,
-        orientation: String
+        page: Int = 1,
+        per_page: Int = 10,
+        orientation: String = "portrait"
     ) = viewModelScope.launch {
         // Update the state
         _details.postValue(Resource.Loading())
