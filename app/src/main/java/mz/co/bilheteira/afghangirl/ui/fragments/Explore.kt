@@ -2,9 +2,10 @@ package mz.co.bilheteira.afghangirl.ui.fragments
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.NavDirections
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_explore.*
@@ -49,11 +50,13 @@ class Explore : Fragment(R.layout.fragment_explore) {
                                     recycler = exploreRecyclerView,
                                     listener = object : OnTouchListener {
                                         override fun onSingleClick(view: View, position: Int) {
-                                            Toast.makeText(
-                                                requireContext(),
-                                                "item on $position",
-                                                Toast.LENGTH_SHORT
-                                            ).show()
+                                            // Using Safe Args to pass data between directions
+                                            val directions: NavDirections =
+                                                ExploreDirections.actionFragmentExploreToFragmentDetails(
+                                                    collectionId = listOfCollections[position].id
+                                                )
+                                            // Navigate to end destination
+                                            findNavController().navigate(directions)
                                         }
 
                                         override fun onDoubleClick(view: View, position: Int) {}
