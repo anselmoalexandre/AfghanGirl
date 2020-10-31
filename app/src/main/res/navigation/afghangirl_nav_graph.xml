@@ -22,7 +22,11 @@
         android:id="@+id/destination_photo"
         android:name="mz.co.bilheteira.afghangirl.ui.fragments.Photo"
         android:label="Photo"
-        tools:layout="@layout/fragment_photo" />
+        tools:layout="@layout/fragment_photo">
+        <argument
+            android:name="photoId"
+            app:argType="string" />
+    </fragment>
 
     <!-- Explore fragment -->
     <fragment
@@ -53,6 +57,5 @@
         android:id="@+id/destination_info"
         android:name="mz.co.bilheteira.afghangirl.ui.fragments.Info"
         android:label="@string/afghan_girl_history"
-        tools:layout="@layout/fragment_info">
-    </fragment>
+        tools:layout="@layout/fragment_info"></fragment>
 </navigation>

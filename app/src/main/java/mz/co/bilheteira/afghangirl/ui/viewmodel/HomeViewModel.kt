@@ -7,11 +7,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import mz.co.bilheteira.afghangirl.data.model.AfghanGirl
-import mz.co.bilheteira.afghangirl.repository.HomeRepository
+import mz.co.bilheteira.afghangirl.repository.AfghanGirlRepository
 import mz.co.bilheteira.afghangirl.util.Resource
 import retrofit2.Response
 
-class HomeViewModel @ViewModelInject constructor(private val repository: HomeRepository) :
+class HomeViewModel @ViewModelInject constructor(private val repository: AfghanGirlRepository) :
     ViewModel(){
 
     // Mutable Live Data to observe Afghan girl photos

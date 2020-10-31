@@ -2,10 +2,10 @@ package mz.co.bilheteira.afghangirl.ui.fragments
 
 import android.os.Bundle
 import android.view.*
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
+import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
@@ -58,11 +58,13 @@ class Home : Fragment(R.layout.fragment_home) {
                                     recycler = homeRecyclerView,
                                     listener = object : OnTouchListener {
                                         override fun onSingleClick(view: View, position: Int) {
-                                            val args = bundleOf("id" to listOfItems[position].id)
-                                            findNavController().navigate(
-                                                R.id.action_HomeFragment_to_PhotoFragment,
-                                                args
-                                            )
+                                            // Using gradle Safe Args to pass data between destinations
+                                            val directions: NavDirections =
+                                                HomeDirections.actionHomeFragmentToPhotoFragment(
+                                                    photoId = listOfItems[position].id
+                                                )
+                                            // Navigate to the destination
+                                            findNavController().navigate(directions)
                                         }
 
                                         override fun onLongClick(view: View, position: Int) {}
