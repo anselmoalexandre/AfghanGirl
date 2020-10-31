@@ -5,7 +5,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_explore.*
@@ -19,6 +18,7 @@ import mz.co.bilheteira.recyclerviewgesturedetector.listener.OnTouchListener
 
 @AndroidEntryPoint
 class Explore : Fragment(R.layout.fragment_explore) {
+    // Explore View model
     private val viewModel: ExploreViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
