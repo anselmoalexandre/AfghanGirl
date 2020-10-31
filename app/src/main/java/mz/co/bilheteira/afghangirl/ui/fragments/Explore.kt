@@ -56,7 +56,8 @@ class Explore : Fragment(R.layout.fragment_explore) {
                                                     collectionId = listOfCollections[position].id
                                                 )
                                             // Navigate to end destination
-                                            findNavController().navigate(directions)
+                                            if (findNavController().currentDestination?.id == R.id.destination_explore)
+                                                findNavController().navigate(directions)
                                         }
 
                                         override fun onDoubleClick(view: View, position: Int) {}
