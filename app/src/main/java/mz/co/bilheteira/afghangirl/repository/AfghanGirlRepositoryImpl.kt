@@ -48,4 +48,26 @@ class AfghanGirlRepositoryImpl @Inject constructor(private val afghanGirlService
      */
     override suspend fun getPhoto(client_id: String, id: String): Response<Photo> =
         afghanGirlService.getPhoto(id = id, client_id = client_id)
+
+    /**
+     * Get collection's photos
+     * [client_id] Client key
+     * [id] The collection’s ID. Required.
+     * [page] Page number to retrieve. (Optional; default: 1)
+     * [per_page] Number of items per page. (Optional; default: 10)
+     * [orientation] Filter by photo orientation. Optional. (Valid values: landscape, portrait, squarish)
+     */
+    override suspend fun getCollectionPhotos(
+        client_id: String,
+        id: String,
+        page: Int,
+        per_page: Int,
+        orientation: String
+    ): Response<List<AfghanGirl>> = afghanGirlService.getCollectionPhotos(
+        id = id,
+        client_id = client_id,
+        page = page,
+        per_page = per_page,
+        orientation = orientation
+    )
 }

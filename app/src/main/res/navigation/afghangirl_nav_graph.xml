@@ -5,6 +5,13 @@
     android:id="@+id/afghangirl_nav_graph"
     app:startDestination="@id/destination_info">
 
+    <!-- Afghan girl Info Fragment -->
+    <fragment
+        android:id="@+id/destination_info"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Info"
+        android:label="@string/afghan_girl_history"
+        tools:layout="@layout/fragment_info" />
+
     <!-- Home fragment -->
     <fragment
         android:id="@+id/destination_home"
@@ -50,12 +57,8 @@
         <action
             android:id="@+id/action_fragmentDetails_to_fragmentPhoto"
             app:destination="@+id/destination_photo" />
+        <argument
+            android:name="collectionId"
+            app:argType="string" />
     </fragment>
-
-    <!-- Afghan girl Info Fragment -->
-    <fragment
-        android:id="@+id/destination_info"
-        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Info"
-        android:label="@string/afghan_girl_history"
-        tools:layout="@layout/fragment_info"></fragment>
 </navigation>
