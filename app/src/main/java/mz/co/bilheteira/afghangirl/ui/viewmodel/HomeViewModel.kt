@@ -1,6 +1,5 @@
 package mz.co.bilheteira.afghangirl.ui.viewmodel
 
-
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

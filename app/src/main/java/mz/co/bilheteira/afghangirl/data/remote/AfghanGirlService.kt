@@ -17,7 +17,7 @@ interface AfghanGirlService {
         @Query("order_by") order_by: String
     ): Response<List<AfghanGirl>>
 
-    @GET("photos/:{id}")
+    @GET("photos/{id}")
     suspend fun getPhoto(
         @Path("id") id: String,
         @Query("client_id") client_id: String

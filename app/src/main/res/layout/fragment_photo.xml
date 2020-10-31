@@ -13,8 +13,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_25dp"
         android:layout_marginBottom="@dimen/_25dp"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/afghan_girl" />
+        android:scaleType="centerCrop" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/afghanGirlUserPhotoInfo"
