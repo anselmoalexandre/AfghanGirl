@@ -8,14 +8,14 @@
     <!-- Afghan girl Info Fragment -->
     <fragment
         android:id="@+id/destination_info"
-        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Info"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.InfoFragment"
         android:label="@string/afghan_girl_history"
         tools:layout="@layout/fragment_info" />
 
     <!-- Home fragment -->
     <fragment
         android:id="@+id/destination_home"
-        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Home"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.HomeFragment"
         android:label="@string/afghan_girl"
         tools:layout="@layout/fragment_home">
         <!-- Actions -->
@@ -27,7 +27,7 @@
     <!-- Afghan girl Photo fragment -->
     <fragment
         android:id="@+id/destination_photo"
-        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Photo"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.PhotoFragment"
         android:label="Photo"
         tools:layout="@layout/fragment_photo">
         <argument
@@ -38,7 +38,7 @@
     <!-- Explore fragment -->
     <fragment
         android:id="@+id/destination_explore"
-        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Explore"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.ExploreFragment"
         android:label="@string/explore"
         tools:layout="@layout/fragment_explore">
         <!-- Actions -->
@@ -50,7 +50,7 @@
     <!-- Details fragment -->
     <fragment
         android:id="@+id/destination_details"
-        android:name="mz.co.bilheteira.afghangirl.ui.fragments.Details"
+        android:name="mz.co.bilheteira.afghangirl.ui.fragments.DetailsFragment"
         android:label="@string/detalhes"
         tools:layout="@layout/fragment_details">
         <!-- Actions -->
