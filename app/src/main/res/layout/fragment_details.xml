@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:context=".ui.fragments.Details"
+        tools:context=".ui.fragments.DetailsFragment"
         tools:listitem="@layout/item_users_photos" />
 
     <!-- Progress bar -->

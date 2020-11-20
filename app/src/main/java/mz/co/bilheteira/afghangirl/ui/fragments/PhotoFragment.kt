@@ -18,7 +18,7 @@ import mz.co.bilheteira.afghangirl.util.Resource
  * create an instance of this fragment.
  */
 @AndroidEntryPoint
-class Photo : Fragment(R.layout.fragment_photo) {
+class PhotoFragment : Fragment(R.layout.fragment_photo) {
     // Photo View Model
     private val viewModel: PhotoViewModel by viewModels()
 

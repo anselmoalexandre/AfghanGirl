@@ -19,7 +19,7 @@ import mz.co.bilheteira.recyclerviewgesturedetector.RecyclerviewGestureDetector
 import mz.co.bilheteira.recyclerviewgesturedetector.listener.OnTouchListener
 
 @AndroidEntryPoint
-class Details : Fragment(R.layout.fragment_details) {
+class DetailsFragment : Fragment(R.layout.fragment_details) {
     // Details view model
     private val viewModel: DetailsViewModel by viewModels()
 

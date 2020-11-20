@@ -2,6 +2,7 @@ package mz.co.bilheteira.afghangirl.ui
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
@@ -13,11 +14,16 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import mz.co.bilheteira.afghangirl.R
+import mz.co.bilheteira.afghangirl.ui.viewmodel.HomeViewModel
 
 @AndroidEntryPoint
-class Main : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     private var backPressOnce: Boolean = false
 
+    // Binding
+
+
+    private val viewModel: HomeViewModel by viewModels()
     // NavHost
     private val navHostFragment by lazy { supportFragmentManager.findFragmentById(R.id.nav_host_fragment) }
 
